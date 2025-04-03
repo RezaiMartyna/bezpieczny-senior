@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bezpieczny Senior w Trąbkach</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css">
+
+  
+  
+</head>
+<body>
+  <!-- NAGŁÓWEK STRONY -->
+
+  <header class="main-header">
+    <div class="header-content">
+      <!-- Logo uczelni (lewa strona) -->
+      <div class="logo-left">
+        <img src="img/logo-uczelni.png" alt="Logo Uczelni" />
+      </div>
+  
+      <!-- Tytuł w środku -->
+      <h1 class="site-title">Bezpieczny Senior<br>w Trąbkach</h1>
+  
+      <!-- Logo gminy (prawa strona) -->
+      <div class="logo-right">
+        <img src="img/gmina-trabki.png" alt="Logo Gminy Trąbki Wielkie" />
+      </div>
+    </div>
+  </header>
+  
+
+  <!-- GŁÓWNA ZAWARTOŚĆ -->
+  <main>
+    <!-- Sekcja informacyjna -->
+    <section class="intro">
+      <h2>Witaj na stronie Bezpieczny Senior w Trąbkach!</h2>
+      <p>
+        Witam serdecznie na stronie poświęconej 
+        <strong>bezpieczeństwu w sieci</strong>, stworzonej z myślą 
+        o seniorach z Gminy Trąbki Wielkie. Znajdziesz tu 
+        <strong>praktyczne porady</strong>, <strong>artykuły</strong> 
+        oraz <strong>odpowiedzi na pytania</strong> związane z ochroną 
+        danych i świadomym korzystaniem z Internetu.
+      </p>
+      <p>
+        Nazywam się Martyna i jestem studentką ostatniego roku 
+        <em>cyberbezpieczeństwa</em> w Akademii Ekonomiczno-Humanistycznej 
+        w Warszawie. Moim celem jest pomóc Wam w odnalezieniu się w gąszczu 
+        informacji, tak aby żadna <em>dezinformacja</em> ani 
+        <em>oszustwo</em> nie mogły Was zaskoczyć. Mam nadzieję, że ta strona 
+        okaże się dla Was przydatną <strong>przystanią wiedzy</strong> 
+        oraz <strong>wsparciem</strong> na drodze do bezpiecznego 
+        korzystania z usług online.
+      </p>
+    </section>
+    
+
+    <!-- Formularz do zadawania pytań -->
+    <section class="ask-form" id="ask-form">
+      <h2>Zadaj pytanie anonimowo</h2>
+      <p class="ask-description">
+        Masz problem z rozpoznaniem oszustwa online lub wątpliwości co do bezpieczeństwa swoich danych?
+        <br>
+        <strong>Wpisz swoje pytanie w formularzu</strong>, a postaram się odpowiedzieć 
+        w ciągu <strong>48 godzin</strong>!
+      </p>
+    
+      <!-- MAILTO: Uwaga - otworzy klienta poczty na komputerze użytkownika -->
+      <form 
+        action="mailto:rezai.martyna@gmail.com" 
+        method="POST" 
+        enctype="text/plain" 
+        class="ask-form__body"
+      >
+        <label for="pytanie">Treść pytania:</label>
+        <textarea 
+          id="pytanie" 
+          name="Treść pytania" 
+          placeholder="Np. Jak rozpoznać fałszywy email?" 
+          rows="4" 
+          required
+        ></textarea>
+    
+        <button type="submit">Wyślij pytanie</button>
+      </form>
+    </section>
+    
+
+    <!-- Lista pytań i odpowiedzi -->
+    <section class="questions-list" id="questions-list">
+      <h2>Ostatnio zadane pytania</h2>
+    
+      <!-- Nowe pole wyszukiwania tematów -->
+      <div style="margin-bottom: 1rem;">
+        <label for="searchInput" style="font-weight: bold;">Wyszukaj temat:</label><br>
+        <input 
+          type="text" 
+          id="searchInput" 
+          placeholder="Wpisz słowo kluczowe, np. 'hasło'..." 
+          style="width: 100%; max-width: 300px; padding: 0.5rem; margin-top: 0.5rem;"
+        />
+      </div>
+    
+      <div id="qaContainer">
+        <!-- JavaScript wstawi tutaj pytania i odpowiedzi -->
+      </div>
+    </section>
+    
+  </main>
+
+  <!-- STOPKA -->
+  <footer>
+    <p>© 2025 Cyber Senior w Trąbkach. Wszystkie prawa zastrzeżone.</p>
+  </footer>
+
+  <!-- Skrypt do obsługi formularza i wczytywania pytań (jeśli korzystasz z Node.js i Express) -->
+  <script src="js/app.js"></script>
+</body>
+</html>
